@@ -25,7 +25,20 @@
   </head>
 
   <body>
-	  <div data-role="page" id="comentarios" data-title="Inbox" data-url="demo-page"> <!--Pagina Comentarios!--> 
+
+    <div data-role="page" id="principal"> <!-- PÁGINA INICIAL -->
+      <div class="contenedor-pantalla">
+        <div class="contenedor-central">
+            <div class="logo"></div>
+            <div role="main" class="ui-content" id="contenedor-botones">
+                <a id="comentarios" href="#comentarios" class="ui-btn ui-icon-delete ui-shadow-icon ui-btn-b">Añadir comentario</a>
+                <a id="recomendar" href="#recomendar" class="ui-btn ui-icon-delete ui-shadow-icon ui-btn-b">Recomendación</a>
+            </div>
+        </div>
+      </div>
+    <div data-role="footer" id="footer"><div class="logo-ull"></div></div>
+
+	  <div data-role="page" id="comentarios" data-title="Inbox" data-url="demo-page"> <!--Pagina Comentarios!-->
     <div data-role="header" data-position="fixed" data-theme="b">
         <h1>Comentarios</h1>
         <a href="#demo-intro" data-rel="back" data-icon="carat-l" data-iconpos="notext">Back</a>
@@ -46,17 +59,28 @@
             </li>
         </ul>
     </div><!-- /content -->
-    <div id="confirm" class="ui-content" data-role="popup" data-theme="a">
-        <p id="question">Are you sure you want to delete:</p>
-        <div class="ui-grid-a">
-            <div class="ui-block-a">
-                <a id="yes" class="ui-btn ui-corner-all ui-mini ui-btn-a" data-rel="back">Yes</a>
-            </div>
-            <div class="ui-block-b">
-                <a id="cancel" class="ui-btn ui-corner-all ui-mini ui-btn-a" data-rel="back">Cancel</a>
-            </div>
-        </div>
-    </div><!-- /popup -->
-</div><!-- fin del comentarios --> 
+    </div>
+
+  <div data-role="page" id="recomendar" data-title="Inbox" data-url="demo-page"> <!--Pagina Recomendación!-->
+  <div data-role="header" data-position="fixed" data-theme="b">
+      <h1>Recomendador</h1>
+      <a href="#demo-intro" data-rel="back" data-icon="carat-l" data-iconpos="notext">Back</a>
+      <a href="#" onclick="window.location.reload()" data-icon="back" data-iconpos="notext">Refresh</a>
+  </div><!-- /header -->
+  <div role="main" class="ui-content">
+      <ul id="list" class="touch" data-role="listview" data-icon="false" data-split-icon="delete">
+          <li>
+              <a href="#demo-mail">
+        <form>
+          <label for="text-6">Introduzca el plato que quiera comer: </label>
+          <a href="#" class="ui-btn ui-btn-inline" type="submit">Enviar</a>
+          <label for="textarea-6">Sugerencia: </label>
+          <div>Aqui va la sugerencia</div>
+        </form>
+              </a>
+          </li>
+      </ul>
+  </div><!-- /content -->
+  </div>
   </body>
 </html>
