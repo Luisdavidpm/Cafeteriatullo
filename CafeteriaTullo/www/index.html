@@ -11,8 +11,7 @@
     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/general.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/jquery.js"></script>
     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
@@ -26,14 +25,12 @@
 
   <body>
       <div data-role="page" id="principal"> <!-- PÁGINA PRINCIPAL -->
-        <div class="contenedor-pantalla">
-          <div class="contenedor-central">
-              <div class="logo"></div>
-              <div role="main" class="ui-content" id="contenedor-botones">
-                  <a id="boton-iniciar" href="#iniciar-sesion" class="ui-btn ui-icon-delete ui-shadow-icon ui-btn-b">Iniciar sesion</a>
-                  <a id="boton-registrar" href="#registrar" class="ui-btn ui-icon-delete ui-shadow-icon ui-btn-b">Registrarse</a>
-              </div>
-          </div>
+        <div class="contenedor-pantalla"> 
+          <div class="contenedor-logo"></div>
+            <div role="main" class="ui-content" id="contenedor-botones">
+              <a id="boton-iniciar" href="#iniciar-sesion" class="ui-btn ui-icon-delete ui-shadow-icon ui-btn-b">Iniciar sesión</a>
+              <a id="boton-registrar" href="#registrar" class="ui-btn ui-icon-delete ui-shadow-icon ui-btn-b">Registrarse</a>
+            </div>
         </div>
         <div data-role="footer" id="footer"><div class="logo-ull"></div></div>
 
@@ -52,8 +49,8 @@
               <input type="email" name="usermail"><br>
               <label for="contra"><b>Contraseña</b></label>
               <input type="password" name="userpass">
-              <a href="#recordar">¿Olvidaste tu contraseña?</a><br><br>
-              <input type="submit" name="iniciar_sesion" value="Iniciar sesión"><br>
+              <a id="mensaje-olvidaste" href="#recordar">¿Olvidaste tu contraseña?</a><br><br>
+              <a id="boton-iniciar-sesion" type="submit" name="iniciar_sesion" class="ui-btn ui-icon-delete ui-shadow-icon ui-btn-b">Iniciar</a>
             </form>
     	    </div>
         </div>
@@ -81,7 +78,7 @@
             <input type="tel" name="nicktele" required>
             <label for="contra"><b>Contraseña</b></label>
             <input type="password" name="userpass" required><br>
-            <input type="submit" name="registrarse" value="Registrarse"><br>
+            <a id="boton-registrarse" type="submit" name="registrarse" class="ui-btn ui-icon-delete ui-shadow-icon ui-btn-b">Registrarse</a>
           </form>
       	</div>
       </div>

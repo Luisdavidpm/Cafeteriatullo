@@ -29,3 +29,10 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
+window.onload = function() { // Función para la detección del dispositivo.
+    if(navigator.platform == 'iPad' || navigator.platform == 'iPhone' || navigator.platform == 'iPod') { // Si es un dispotivo Apple.
+      document.getElementById("cabecera-dispositivo").style.height = "3%"; // Mostramos la barra superior.
+      document.getElementById("contenedor-dias").style.height = "37%"; // Reajustamos el tamaño del calendario.
+    }
+}
